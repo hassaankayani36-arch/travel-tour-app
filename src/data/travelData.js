@@ -47,6 +47,14 @@ export const destinations = [
         coordinates: [35.2227, 72.4258],
         temperatureCity: 'Mingora',
     },
+    {
+        name: 'Chitral',
+        region: 'Khyber Pakhtunkhwa',
+        description: 'Warm local hospitality, mountain food, Kalash culture, and quiet valleys.',
+        image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=85',
+        coordinates: [35.85, 71.78],
+        temperatureCity: 'Chitral',
+    },
 ];
 
 export const tours = [
@@ -73,6 +81,14 @@ export const tours = [
         price: 'PKR 72,000',
         image: destinations[2].image,
         description: 'A peaceful mountain stay near Nanga Parbat for nature lovers.',
+    },
+    {
+        name: 'Chitral Culture Route',
+        duration: '7 days',
+        destination: 'Chitral, Bumburet, and Kalash Valley',
+        price: 'PKR 84,000',
+        image: destinations[6].image,
+        description: 'Local food, mountain traditions, and welcoming communities across Chitral.',
     },
 ];
 

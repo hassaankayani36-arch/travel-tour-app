@@ -1,5 +1,7 @@
 import HomeHero from './sections/HomeHero/HomeHero';
 import { destinations, tours } from '../../data/travelData';
+import { teamMembers } from '../../data/teams';
+import { customerFeedback } from '../../data/feedback';
 import './HomePage.css';
 
 function HomePage() {
@@ -14,7 +16,7 @@ function HomePage() {
                 </div>
                 <div className="tourGrid">
                     {tours.map((tour, index) => (
-                        <article className="tourCard" key={tour.name}>
+                        <article className="featuredCard" key={tour.name}>
                             <img src={tour.image} alt={tour.name} />
                             <div className="cardBody">
                                 <span>0{index + 1} / {tour.duration}</span>
@@ -33,10 +35,10 @@ function HomePage() {
             <section className="contentSection">
                 <div className="sectionHeading headingRow">
                     <div>
-                        <p className="eyebrow">Today in the mountains</p>
-                        <h2>Check the skies before you go.</h2>
+                        <p className="eyebrow">Travel with purpose</p>
+                        <h2>Every season has a story.</h2>
                     </div>
-                    <p>Live updates from Open-Meteo. Data refreshes on every visit.</p>
+                    <p>From quiet summer lakes to crisp winter trails, discover a different side of northern Pakistan on every visit.</p>
                 </div>
             </section>
             <section className="contentSection gallerySection">
@@ -55,6 +57,44 @@ function HomePage() {
                     <p>The Saiban team calls northern Pakistan home. That is why we offer more than a route; we create a genuine connection to each place.</p>
                 </div>
                 <blockquote>“Traveling through Hunza with Saiban felt less like a tour and more like visiting a friend.”<cite>— Areeba, Lahore</cite></blockquote>
+            </section>
+            <section className="contentSection teamSection">
+                <div className="sectionHeading">
+                    <p className="eyebrow">Meet the team</p>
+                    <h2>The people behind your journey.</h2>
+                </div>
+                <div className="teamGrid">
+                    {teamMembers.map((member) => (
+                        <article className="teamCard" key={member.name}>
+                            <img src={member.image} alt={member.name} />
+                            <div className="cardBody">
+                                <h3>{member.name}</h3>
+                                <p className="teamRole">{member.role}</p>
+                                <p>{member.description}</p>
+                            </div>
+                        </article>
+                    ))}
+                </div>
+            </section>
+            <section className="contentSection feedbackSection">
+                <div className="sectionHeading">
+                    <p className="eyebrow">Customer feedback</p>
+                    <h2>Stories from the road.</h2>
+                </div>
+                <div className="feedbackGrid">
+                    {customerFeedback.map((feedback) => (
+                        <article className="feedbackCard" key={feedback.name}>
+                            <div className="feedbackTop">
+                                <strong>{feedback.name}</strong>
+                                <span>{feedback.time}</span>
+                            </div>
+                            <div className="stars" aria-label={`${feedback.rating} out of 5 stars`}>
+                                {'★'.repeat(feedback.rating)}{'☆'.repeat(5 - feedback.rating)}
+                            </div>
+                            <p>{feedback.review}</p>
+                        </article>
+                    ))}
+                </div>
             </section>
         </main>
     );

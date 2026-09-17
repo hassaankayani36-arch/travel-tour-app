@@ -12,6 +12,10 @@
     max-width: 680px;
 }
 
+.featuredSection .sectionHeading {
+    max-width: none;
+}
+
 .eyebrow {
     color: #e86f51;
     font-family: Arial, sans-serif;
@@ -47,20 +51,26 @@
     margin-top: 36px;
 }
 
-.tourCard {
+.featuredCard {
     background: #fff;
     border: 1px solid #d9ded7;
+    display: flex;
+    flex-direction: column;
+    min-height: 430px;
     overflow: hidden;
 }
 
-.tourCard img {
+.featuredCard img {
     display: block;
-    height: 250px;
+    height: 260px;
     object-fit: cover;
     width: 100%;
 }
 
 .cardBody {
+    display: flex;
+    flex-direction: column;
+    height: 168px;
     padding: 20px;
 }
 
@@ -82,6 +92,92 @@
 .cardBody p {
     color: #55706c;
     margin: 0;
+}
+
+.teamGrid,
+.feedbackGrid {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 36px;
+}
+
+.teamCard,
+.feedbackCard {
+    background: #fff;
+    border: 1px solid #d9ded7;
+}
+
+.teamCard {
+    display: flex;
+    flex-direction: column;
+}
+
+.teamCard img {
+    height: 230px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.teamCard .cardBody {
+    min-height: 190px;
+}
+
+.teamCard h3 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin: 0 0 6px;
+}
+
+.teamCard p {
+    color: #55706c;
+    font-family: Arial, sans-serif;
+    font-size: .85rem;
+    line-height: 1.5;
+    margin: 8px 0 0;
+}
+
+.teamCard .teamRole {
+    color: #e86f51;
+    font-size: .75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.feedbackCard {
+    min-height: 190px;
+    padding: 20px;
+}
+
+.feedbackTop {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.feedbackTop strong {
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.feedbackTop span {
+    color: #55706c;
+    font-family: Arial, sans-serif;
+    font-size: .75rem;
+}
+
+.stars {
+    color: #e86f51;
+    letter-spacing: 2px;
+    margin-top: 14px;
+}
+
+.feedbackCard>p {
+    color: #55706c;
+    font-family: Arial, sans-serif;
+    line-height: 1.55;
+    margin: 14px 0 0;
 }
 
 .togetherSection {
@@ -169,7 +265,9 @@
 @media (max-width: 760px) {
 
     .tourGrid,
-    .peopleSection {
+    .peopleSection,
+    .teamGrid,
+    .feedbackGrid {
         grid-template-columns: 1fr;
     }
 
