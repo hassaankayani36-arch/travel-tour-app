@@ -1,0 +1,132 @@
+.destinationsIntro {
+    margin: 0 auto;
+    max-width: 1240px;
+}
+
+.destinationsIntro__heading {
+    border-bottom: 1px solid rgba(23, 60, 58, .18);
+    display: grid;
+    gap: 24px;
+    grid-template-columns: 1fr minmax(240px, 360px);
+    padding-bottom: 52px;
+}
+
+.destinationsIntro__eyebrow {
+    color: #e86f51;
+    font-family: Arial, sans-serif;
+    font-size: .72rem;
+    font-weight: 700;
+    grid-column: 1 / -1;
+    letter-spacing: .16em;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.destinationsIntro h1 {
+    font-size: clamp(3rem, 6vw, 6rem);
+    font-weight: 400;
+    letter-spacing: -.07em;
+    line-height: .92;
+    margin: 0;
+}
+
+.destinationsIntro__description {
+    align-self: end;
+    color: #55706c;
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.destinationsIntro__grid {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(3, 1fr);
+    padding-top: 24px;
+}
+
+.destinationTile {
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    min-height: 310px;
+    padding: 26px;
+    position: relative;
+}
+
+.destinationTile::after {
+    background: linear-gradient(transparent 25%, rgba(23, 60, 58, .9));
+    border: 1px solid rgba(255, 255, 255, .35);
+    content: '';
+    inset: 12px;
+    position: absolute;
+}
+
+.destinationTile>* {
+    position: relative;
+    z-index: 1;
+}
+
+.destinationTile span {
+    font-family: Arial, sans-serif;
+    font-size: .75rem;
+    margin-bottom: auto;
+}
+
+.destinationTile h2 {
+    font-size: 2.6rem;
+    font-weight: 400;
+    letter-spacing: -.06em;
+    margin: 0 0 8px;
+}
+
+.destinationTile p {
+    font-family: Arial, sans-serif;
+    font-size: .82rem;
+    margin: 0;
+}
+
+.destinationTools {
+    display: grid;
+    gap: 42px;
+    grid-template-columns: 1.4fr .8fr;
+    margin-top: 90px;
+}
+
+.destinationTools h2 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 400;
+    letter-spacing: -.05em;
+    line-height: .98;
+    margin: 0 0 24px;
+}
+
+.destinationTools iframe {
+    border: 0;
+    height: 360px;
+    width: 100%;
+}
+
+.destinationWeather {
+    align-content: start;
+    display: grid;
+    gap: 16px;
+}
+
+@media (max-width: 760px) {
+    .destinationsIntro__heading {
+        display: block;
+    }
+
+    .destinationsIntro__description {
+        margin-top: 24px;
+    }
+
+    .destinationsIntro__grid,
+    .destinationTools {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,137 @@
+.toursIntro {
+    margin: 0 auto;
+    max-width: 1240px;
+}
+
+.toursIntro__heading {
+    align-items: end;
+    display: grid;
+    gap: 24px;
+    grid-template-columns: 1fr minmax(240px, 360px);
+    margin-bottom: 58px;
+}
+
+.toursIntro__eyebrow,
+.tourCard p {
+    color: #e86f51;
+    font-family: Arial, sans-serif;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+}
+
+.toursIntro__eyebrow {
+    grid-column: 1 / -1;
+    margin: 0;
+}
+
+.toursIntro h1 {
+    font-size: clamp(3rem, 6vw, 6rem);
+    font-weight: 400;
+    letter-spacing: -.07em;
+    line-height: .92;
+    margin: 0;
+    max-width: 700px;
+}
+
+.toursIntro__description {
+    color: #55706c;
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.toursIntro__grid {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.tourCard {
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    min-height: 420px;
+    overflow: hidden;
+    padding: 26px;
+    position: relative;
+}
+
+.tourCard::before {
+    background: linear-gradient(transparent 20%, rgba(23, 60, 58, .92));
+    content: '';
+    inset: 0;
+    position: absolute;
+}
+
+.tourCard>* {
+    position: relative;
+}
+
+.tourCard p {
+    color: #f6c4a9;
+    margin: 0 0 auto;
+}
+
+.tourCard h2 {
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 400;
+    letter-spacing: -.05em;
+    margin: 0 0 8px;
+}
+
+.tourCard span {
+    font-family: Arial, sans-serif;
+    font-size: .78rem;
+    letter-spacing: .04em;
+}
+
+.tourCard strong {
+    color: #f6c4a9;
+    display: block;
+    font-family: Arial, sans-serif;
+    font-size: .9rem;
+    margin-top: 18px;
+}
+
+.tourCard small {
+    color: rgba(255, 255, 255, .7);
+    font-size: .68rem;
+    font-weight: 400;
+}
+
+.tourCard button {
+    background: #e86f51;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    margin-top: 18px;
+    padding: 12px 15px;
+    text-transform: uppercase;
+}
+
+@media (max-width: 760px) {
+    .toursIntro__heading {
+        display: block;
+    }
+
+    .toursIntro__description {
+        margin-top: 24px;
+    }
+
+    .toursIntro__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tourCard {
+        min-height: 320px;
+    }
+}

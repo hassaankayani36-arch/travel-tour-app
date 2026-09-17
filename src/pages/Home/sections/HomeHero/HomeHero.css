@@ -1,0 +1,133 @@
+.homeHero {
+    align-items: center;
+    background: linear-gradient(110deg, rgba(23, 60, 58, 0.96), rgba(23, 60, 58, 0.3)), url('https://images.unsplash.com/photo-1533130061792-64b345e4a833?auto=format&fit=crop&w=1800&q=88') center/cover;
+    border-radius: 4px;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    min-height: min(700px, calc(100vh - 120px));
+    overflow: hidden;
+    padding: clamp(32px, 7vw, 96px);
+    position: relative;
+}
+
+.homeHero::after {
+    border: 1px solid rgba(23, 60, 58, 0.18);
+    border-radius: 50%;
+    content: '';
+    height: 420px;
+    position: absolute;
+    right: -100px;
+    top: -120px;
+    width: 420px;
+}
+
+.homeHero__content {
+    max-width: 680px;
+    position: relative;
+    z-index: 1;
+}
+
+.homeHero__eyebrow {
+    color: #e86f51;
+    font-family: Arial, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    margin: 0 0 24px;
+    text-transform: uppercase;
+}
+
+.homeHero h1 {
+    color: #ffffff;
+    font-size: clamp(3rem, 7vw, 6.8rem);
+    font-weight: 400;
+    letter-spacing: -0.07em;
+    line-height: 0.95;
+    margin: 0;
+    max-width: 760px;
+    text-shadow: 0 3px 20px rgba(0, 0, 0, 0.28);
+}
+
+.homeHero__description {
+    color: rgba(248, 243, 234, 0.8);
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 28px 0 0;
+    max-width: 430px;
+}
+
+.homeHero__actions {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 36px;
+}
+
+.homeHero__actions a {
+    font-family: Arial, sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 15px 22px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.homeHero__primaryAction {
+    background: #e86f51;
+    color: #f5f1e9;
+}
+
+.homeHero__secondaryAction {
+    border-bottom: 1px solid #f8f3ea;
+    color: #f8f3ea;
+}
+
+.homeHero__stamp {
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    border-radius: 50%;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    height: 190px;
+    justify-content: center;
+    margin-right: 5%;
+    transform: rotate(12deg);
+    width: 190px;
+    z-index: 1;
+}
+
+.homeHero__stamp span,
+.homeHero__stamp strong {
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+}
+
+.homeHero__stamp span {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+}
+
+.homeHero__stamp strong {
+    font-size: 1.25rem;
+}
+
+@media (max-width: 760px) {
+    .homeHero {
+        align-items: flex-start;
+        min-height: 620px;
+    }
+
+    .homeHero__stamp {
+        bottom: 30px;
+        height: 130px;
+        margin: 0;
+        position: absolute;
+        right: 24px;
+        width: 130px;
+    }
+}

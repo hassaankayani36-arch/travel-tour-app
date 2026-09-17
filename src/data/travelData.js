@@ -1,0 +1,78 @@
+export const destinations = [
+    {
+        name: 'Hunza',
+        region: 'Gilgit-Baltistan',
+        description: 'Quiet lakes, glass-like mountains, and welcoming local communities.',
+        image: 'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=85',
+        coordinates: [36.3167, 74.65],
+        temperatureCity: 'Hunza',
+    },
+    {
+        name: 'Skardu',
+        region: 'Gilgit-Baltistan',
+        description: 'A memorable mountain escape from the Deosai plains to Shangrila.',
+        image: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=85',
+        coordinates: [35.2971, 75.6333],
+        temperatureCity: 'Skardu',
+    },
+    {
+        name: 'Fairy Meadows',
+        region: 'Diamer',
+        description: 'A night beneath the stars in the shadow of Nanga Parbat.',
+        image: 'https://images.unsplash.com/photo-1464278533981-50106e6176b1?auto=format&fit=crop&w=1200&q=85',
+        coordinates: [35.4167, 74.5833],
+        temperatureCity: 'Fairy Meadows',
+    },
+    {
+        name: 'Kumrat',
+        region: 'Khyber Pakhtunkhwa',
+        description: 'Deodar forests, flowing rivers, and genuinely slow travel.',
+        image: 'https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=85',
+        coordinates: [35.55, 72.2167],
+        temperatureCity: 'Kumrat',
+    },
+    {
+        name: 'Naran Kaghan',
+        region: 'Khyber Pakhtunkhwa',
+        description: 'A beautiful journey through Lulusar, Saif-ul-Malook, and valley roads.',
+        image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=85',
+        coordinates: [34.9097, 73.6511],
+        temperatureCity: 'Naran',
+    },
+    {
+        name: 'Swat',
+        region: 'Khyber Pakhtunkhwa',
+        description: 'Green valleys, riverside stays, and the fresh air of Malam Jabba.',
+        image: 'https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1200&q=85',
+        coordinates: [35.2227, 72.4258],
+        temperatureCity: 'Mingora',
+    },
+];
+
+export const tours = [
+    {
+        name: 'Hunza Heritage Trail',
+        duration: '7 days',
+        destination: 'Hunza, Attabad, and Passu',
+        price: 'PKR 89,000',
+        image: destinations[0].image,
+        description: 'A balanced valley escape with Baltit Fort, local food, and Attabad Lake.',
+    },
+    {
+        name: 'Skardu Great Escape',
+        duration: '8 days',
+        destination: 'Skardu, Shigar, and Deosai',
+        price: 'PKR 115,000',
+        image: destinations[1].image,
+        description: 'From cold deserts to alpine lakes, every day reveals a new landscape.',
+    },
+    {
+        name: 'Fairy Meadows Basecamp',
+        duration: '6 days',
+        destination: 'Raikot and Fairy Meadows',
+        price: 'PKR 72,000',
+        image: destinations[2].image,
+        description: 'A peaceful mountain stay near Nanga Parbat for nature lovers.',
+    },
+];
+

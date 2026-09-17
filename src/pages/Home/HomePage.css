@@ -1,0 +1,198 @@
+.homePage {
+    padding: clamp(18px, 3vw, 40px) clamp(18px, 6vw, 88px) 80px;
+}
+
+.homeSection {
+    margin: 0 auto;
+    max-width: 1240px;
+    padding: 110px 0 0;
+}
+
+.sectionHeading {
+    max-width: 680px;
+}
+
+.sectionHeading__eyebrow {
+    color: #e86f51;
+    font-family: Arial, sans-serif;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .16em;
+    margin: 0 0 18px;
+    text-transform: uppercase;
+}
+
+.sectionHeading h2,
+.homeSection--together h2 {
+    font-size: clamp(2.3rem, 5vw, 5.2rem);
+    font-weight: 400;
+    letter-spacing: -.06em;
+    line-height: .96;
+    margin: 0;
+}
+
+.sectionHeading>p:last-child,
+.sectionHeading--row>p,
+.homeSection--people>div>p:last-child {
+    color: #55706c;
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+    margin: 22px 0 0;
+    max-width: 480px;
+}
+
+.tourPreviewGrid,
+.weatherGrid {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 40px;
+}
+
+.tourPreview {
+    background: #fff;
+    box-shadow: 0 12px 35px rgba(23, 60, 58, .08);
+    overflow: hidden;
+}
+
+.tourPreview img {
+    display: block;
+    height: 270px;
+    object-fit: cover;
+    transition: transform 350ms ease;
+    width: 100%;
+}
+
+.tourPreview:hover img {
+    transform: scale(1.04);
+}
+
+.tourPreview__body {
+    padding: 22px;
+}
+
+.tourPreview__body span,
+.tourPreview__body p {
+    color: #e86f51;
+    font-family: Arial, sans-serif;
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+.tourPreview__body h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin: 14px 0 8px;
+}
+
+.tourPreview__body p {
+    color: #55706c;
+    margin: 0;
+}
+
+.homeSection--together {
+    background: #e86f51;
+    color: #fff;
+    margin: 110px calc(clamp(18px, 6vw, 88px) * -1) 0;
+    max-width: none;
+    padding: clamp(45px, 8vw, 110px) clamp(24px, 8vw, 150px);
+}
+
+.homeSection--together .sectionHeading__eyebrow {
+    color: #173c3a;
+}
+
+.homeButton {
+    background: #173c3a;
+    color: #fff;
+    display: inline-block;
+    font-family: Arial, sans-serif;
+    font-size: .76rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    margin-top: 34px;
+    padding: 16px 22px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.sectionHeading--row {
+    align-items: end;
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+    max-width: none;
+}
+
+.sectionHeading--row>p {
+    margin: 0;
+}
+
+.galleryGrid {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    grid-template-rows: 190px 190px;
+    margin-top: 40px;
+}
+
+.galleryGrid img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.galleryGrid img:first-child {
+    grid-row: 1 / -1;
+}
+
+.homeSection--people {
+    align-items: center;
+    border-top: 1px solid rgba(23, 60, 58, .15);
+    display: grid;
+    gap: 80px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.homeSection--people blockquote {
+    color: #173c3a;
+    font-size: clamp(1.6rem, 3vw, 2.6rem);
+    line-height: 1.12;
+    margin: 0;
+}
+
+.homeSection--people cite {
+    color: #e86f51;
+    display: block;
+    font-family: Arial, sans-serif;
+    font-size: .75rem;
+    font-style: normal;
+    letter-spacing: .08em;
+    margin-top: 22px;
+    text-transform: uppercase;
+}
+
+@media (max-width: 760px) {
+
+    .tourPreviewGrid,
+    .weatherGrid,
+    .homeSection--people {
+        grid-template-columns: 1fr;
+    }
+
+    .sectionHeading--row {
+        align-items: flex-start;
+        display: block;
+    }
+
+    .galleryGrid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 180px 180px;
+    }
+
+    .galleryGrid img:first-child {
+        grid-row: auto;
+    }
+}
