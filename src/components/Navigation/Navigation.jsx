@@ -3,12 +3,12 @@ import './Navigation.css';
 
 function Navigation() {
     return (
-        <nav className="navigation">
-            <NavLink className="navigation__brand" to="/">
-                <span className="navigation__mark">S</span>
+        <nav className="appHeader">
+            <NavLink className="appLogo" to="/">
+                <span className="logoMark">S</span>
                 <span>Travel & Tours</span>
             </NavLink>
-            <div className="navigation__links">
+            <div className="navLinks">
                 <NavLink to="/">Home</NavLink>
                 <NavLink to="/tours">Tours</NavLink>
                 <NavLink to="/destinations">Destinations</NavLink>

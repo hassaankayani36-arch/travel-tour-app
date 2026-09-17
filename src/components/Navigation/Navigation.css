@@ -1,67 +1,60 @@
-.navigation {
+.appHeader {
     align-items: center;
-    background: rgba(245, 241, 233, 0.92);
-    border-bottom: 1px solid rgba(23, 60, 58, 0.12);
+    background: #f5f1e9;
+    border-bottom: 1px solid #d9ded7;
     display: flex;
     justify-content: space-between;
-    padding: 20px clamp(20px, 6vw, 88px);
-    position: sticky;
-    top: 0;
-    z-index: 10;
+    padding: 18px 6%;
 }
 
-.navigation__brand {
+.appLogo {
     align-items: center;
     color: #173c3a;
     display: flex;
     gap: 10px;
-    font-size: 1.35rem;
+    font-size: 1.25rem;
     font-weight: 700;
-    letter-spacing: -0.04em;
+    text-decoration: none;
 }
 
-.navigation__links {
+.logoMark {
+    align-items: center;
+    background: #e86f51;
+    color: #fff;
     display: flex;
-    gap: clamp(14px, 2.5vw, 34px);
+    height: 32px;
+    justify-content: center;
+    width: 32px;
 }
 
-.navigation a {
+.navLinks {
+    display: flex;
+    gap: 24px;
+}
+
+.navLinks a {
     color: #55706c;
     font-family: Arial, sans-serif;
-    font-size: 0.78rem;
+    font-size: .8rem;
     font-weight: 700;
-    letter-spacing: 0.08em;
     text-decoration: none;
     text-transform: uppercase;
-    transition: color 180ms ease;
 }
 
-.navigation a:hover,
-.navigation a.active {
+.navLinks a:hover,
+.navLinks a.active {
     color: #e86f51;
 }
 
 @media (max-width: 640px) {
-    .navigation {
+    .appHeader {
         align-items: flex-start;
         flex-direction: column;
-        gap: 16px;
+        gap: 14px;
     }
 
-    .navigation__links {
+    .navLinks {
         flex-wrap: wrap;
-        row-gap: 10px;
+        gap: 12px 18px;
     }
-}
-
-.navigation__mark {
-    align-items: center;
-    background: #e86f51;
-    color: #fff;
-    display: inline-flex;
-    font-family: Georgia, 'Times New Roman', serif;
-    height: 34px;
-    justify-content: center;
-    transform: rotate(-8deg);
-    width: 34px;
 }

@@ -1,143 +1,86 @@
-.planYourTourIntro {
+.plannerPage {
     margin: 0 auto;
     max-width: 1040px;
 }
 
-.planYourTourIntro__heading {
-    margin-bottom: 48px;
+.plannerPage .pageHeading {
+    display: block;
     max-width: 720px;
 }
 
-.planYourTourIntro__eyebrow {
-    color: #e86f51;
-    font-family: Arial, sans-serif;
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.16em;
-    margin: 0 0 22px;
-    text-transform: uppercase;
+.plannerPage .pageHeading h1 {
+    margin-top: 0;
 }
 
-.planYourTourIntro h1 {
-    font-size: clamp(3rem, 6vw, 6rem);
-    font-weight: 400;
-    letter-spacing: -0.07em;
-    line-height: 0.92;
-    margin: 0;
-}
-
-.planYourTourIntro__heading>p:last-child {
+.plannerPage .pageHeading>p:last-child {
     color: #55706c;
     font-family: Arial, sans-serif;
-    line-height: 1.7;
-    margin: 24px 0 0;
-    max-width: 440px;
+    line-height: 1.6;
+    margin-top: 20px;
+    max-width: 480px;
 }
 
-.tourPlanner {
+.plannerForm {
     background: #173c3a;
-    color: #f5f1e9;
+    color: #fff;
     display: grid;
-    gap: 28px;
+    gap: 24px;
     grid-template-columns: repeat(3, 1fr) auto;
-    padding: clamp(24px, 5vw, 48px);
+    margin-top: 34px;
+    padding: 30px;
 }
 
-.tourPlanner label {
+.plannerForm label {
     display: flex;
     flex-direction: column;
     font-family: Arial, sans-serif;
-    font-size: 0.72rem;
-    font-weight: 700;
-    gap: 12px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+    font-size: .8rem;
+    gap: 10px;
 }
 
-.tourPlanner select,
-.tourPlanner input {
+.plannerForm select,
+.plannerForm input {
     background: transparent;
     border: 0;
-    border-bottom: 1px solid rgba(245, 241, 233, 0.45);
-    border-radius: 0;
-    color: #f5f1e9;
+    border-bottom: 1px solid #9fb2aa;
+    color: #fff;
     min-width: 0;
-    outline: 0;
     padding: 10px 0;
 }
 
-.tourPlanner select option {
+.plannerForm select option {
     color: #173c3a;
 }
 
-.tourPlanner input::placeholder {
-    color: rgba(245, 241, 233, 0.65);
-}
-
-.tourPlanner button {
+.plannerForm button {
     align-self: end;
     background: #e86f51;
     border: 0;
     color: #fff;
     cursor: pointer;
+    padding: 12px 16px;
+}
+
+.message {
+    background: #dce9df;
+    color: #173c3a;
     font-family: Arial, sans-serif;
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    padding: 15px 20px;
-    text-transform: uppercase;
+    margin: 18px 0 0;
+    padding: 14px 18px;
+}
+
+.errorMessage {
+    background: #f6c4a9;
 }
 
 @media (max-width: 820px) {
-    .tourPlanner {
+    .plannerForm {
         grid-template-columns: 1fr 1fr;
-    }
-
-    .tourPlanner button {
-        justify-self: start;
     }
 }
 
 @media (max-width: 520px) {
-    .tourPlanner {
+    .plannerForm {
         grid-template-columns: 1fr;
     }
-}
-
-.plannerMessage {
-    background: #dce9df;
-    color: #173c3a;
-    font-family: Arial, sans-serif;
-    line-height: 1.5;
-    margin: 18px 0 0;
-    padding: 15px 18px;
-}
-
-.plannerMessage--error {
-    background: #f6c4a9;
-}
-
-.currencyWidget {
-    align-items: center;
-    border-bottom: 1px solid rgba(23, 60, 58, .15);
-    display: flex;
-    justify-content: space-between;
-    margin-top: 28px;
-    padding: 20px 0;
-}
-
-.currencyWidget span,
-.currencyWidget p {
-    color: #55706c;
-    font-family: Arial, sans-serif;
-    font-size: .78rem;
-    margin: 0;
-}
-
-.currencyWidget strong {
-    color: #173c3a;
-    display: block;
-    font-size: 1.2rem;
-    font-weight: 400;
-    margin-top: 5px;
 }

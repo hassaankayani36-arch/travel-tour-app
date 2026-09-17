@@ -1,198 +1,188 @@
 .homePage {
-    padding: clamp(18px, 3vw, 40px) clamp(18px, 6vw, 88px) 80px;
+    padding: 24px 6% 70px;
 }
 
-.homeSection {
+.contentSection {
     margin: 0 auto;
     max-width: 1240px;
-    padding: 110px 0 0;
+    padding-top: 80px;
 }
 
 .sectionHeading {
     max-width: 680px;
 }
 
-.sectionHeading__eyebrow {
+.eyebrow {
     color: #e86f51;
     font-family: Arial, sans-serif;
-    font-size: .72rem;
+    font-size: .75rem;
     font-weight: 700;
-    letter-spacing: .16em;
-    margin: 0 0 18px;
+    letter-spacing: .1em;
+    margin: 0 0 16px;
     text-transform: uppercase;
 }
 
 .sectionHeading h2,
-.homeSection--together h2 {
-    font-size: clamp(2.3rem, 5vw, 5.2rem);
+.togetherSection h2 {
+    font-size: clamp(2.2rem, 5vw, 4.8rem);
     font-weight: 400;
-    letter-spacing: -.06em;
-    line-height: .96;
+    line-height: 1;
     margin: 0;
 }
 
 .sectionHeading>p:last-child,
-.sectionHeading--row>p,
-.homeSection--people>div>p:last-child {
+.headingRow>p,
+.peopleSection>div>p:last-child {
     color: #55706c;
     font-family: Arial, sans-serif;
-    line-height: 1.7;
-    margin: 22px 0 0;
-    max-width: 480px;
+    line-height: 1.6;
+    margin-top: 20px;
+    max-width: 500px;
 }
 
-.tourPreviewGrid,
-.weatherGrid {
+.tourGrid {
     display: grid;
     gap: 18px;
     grid-template-columns: repeat(3, 1fr);
-    margin-top: 40px;
+    margin-top: 36px;
 }
 
-.tourPreview {
+.tourCard {
     background: #fff;
-    box-shadow: 0 12px 35px rgba(23, 60, 58, .08);
+    border: 1px solid #d9ded7;
     overflow: hidden;
 }
 
-.tourPreview img {
+.tourCard img {
     display: block;
-    height: 270px;
+    height: 250px;
     object-fit: cover;
-    transition: transform 350ms ease;
     width: 100%;
 }
 
-.tourPreview:hover img {
-    transform: scale(1.04);
+.cardBody {
+    padding: 20px;
 }
 
-.tourPreview__body {
-    padding: 22px;
-}
-
-.tourPreview__body span,
-.tourPreview__body p {
+.cardBody span,
+.cardBody p {
     color: #e86f51;
     font-family: Arial, sans-serif;
-    font-size: .7rem;
+    font-size: .75rem;
     font-weight: 700;
-    letter-spacing: .1em;
     text-transform: uppercase;
 }
 
-.tourPreview__body h3 {
-    font-size: 1.8rem;
+.cardBody h3 {
+    font-size: 1.7rem;
     font-weight: 400;
-    margin: 14px 0 8px;
+    margin: 12px 0 8px;
 }
 
-.tourPreview__body p {
+.cardBody p {
     color: #55706c;
     margin: 0;
 }
 
-.homeSection--together {
+.togetherSection {
     background: #e86f51;
     color: #fff;
-    margin: 110px calc(clamp(18px, 6vw, 88px) * -1) 0;
+    margin-left: -6.4%;
+    margin-right: -6.4%;
     max-width: none;
-    padding: clamp(45px, 8vw, 110px) clamp(24px, 8vw, 150px);
+    padding: 70px 10%;
 }
 
-.homeSection--together .sectionHeading__eyebrow {
+.togetherSection .eyebrow {
     color: #173c3a;
 }
 
-.homeButton {
-    background: #173c3a;
-    color: #fff;
+.primaryButton,
+.secondaryButton {
     display: inline-block;
     font-family: Arial, sans-serif;
-    font-size: .76rem;
     font-weight: 700;
-    letter-spacing: .08em;
-    margin-top: 34px;
-    padding: 16px 22px;
+    padding: 14px 20px;
     text-decoration: none;
-    text-transform: uppercase;
 }
 
-.sectionHeading--row {
+.primaryButton {
+    background: #173c3a;
+    color: #fff;
+}
+
+.secondaryButton {
+    border-bottom: 1px solid #fff;
+    color: #fff;
+}
+
+.togetherSection .primaryButton {
+    margin-top: 28px;
+}
+
+.headingRow {
     align-items: end;
     display: flex;
-    gap: 40px;
     justify-content: space-between;
-    max-width: none;
 }
 
-.sectionHeading--row>p {
-    margin: 0;
-}
-
-.galleryGrid {
+.gallery {
     display: grid;
     gap: 12px;
     grid-template-columns: 1.4fr 1fr 1fr;
-    grid-template-rows: 190px 190px;
-    margin-top: 40px;
+    margin-top: 36px;
 }
 
-.galleryGrid img {
-    height: 100%;
+.gallery img {
+    height: 220px;
     object-fit: cover;
     width: 100%;
 }
 
-.galleryGrid img:first-child {
-    grid-row: 1 / -1;
+.gallery img:first-child {
+    grid-row: span 2;
+    height: 452px;
 }
 
-.homeSection--people {
-    align-items: center;
-    border-top: 1px solid rgba(23, 60, 58, .15);
+.peopleSection {
+    border-top: 1px solid #d9ded7;
     display: grid;
-    gap: 80px;
+    gap: 60px;
     grid-template-columns: 1fr 1fr;
 }
 
-.homeSection--people blockquote {
-    color: #173c3a;
-    font-size: clamp(1.6rem, 3vw, 2.6rem);
-    line-height: 1.12;
+.peopleSection blockquote {
+    font-size: 2rem;
+    line-height: 1.2;
     margin: 0;
 }
 
-.homeSection--people cite {
+.peopleSection cite {
     color: #e86f51;
     display: block;
     font-family: Arial, sans-serif;
     font-size: .75rem;
     font-style: normal;
-    letter-spacing: .08em;
-    margin-top: 22px;
-    text-transform: uppercase;
+    margin-top: 18px;
 }
 
 @media (max-width: 760px) {
 
-    .tourPreviewGrid,
-    .weatherGrid,
-    .homeSection--people {
+    .tourGrid,
+    .peopleSection {
         grid-template-columns: 1fr;
     }
 
-    .sectionHeading--row {
-        align-items: flex-start;
+    .headingRow {
         display: block;
     }
 
-    .galleryGrid {
+    .gallery {
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 180px 180px;
     }
 
-    .galleryGrid img:first-child {
+    .gallery img:first-child {
         grid-row: auto;
+        height: 220px;
     }
 }

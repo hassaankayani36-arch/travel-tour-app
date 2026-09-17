@@ -18,15 +18,15 @@ function PlanYourTourIntro() {
     };
 
     return (
-        <section className="planYourTourIntro">
-            <div className="planYourTourIntro__heading">
-                <p className="planYourTourIntro__eyebrow">Design your journey</p>
+        <section className="plannerPage">
+            <div className="pageHeading">
+                <p className="eyebrow">Design your journey</p>
                 <h1>Your tour, your rhythm.</h1>
                 <p>
                     Tell us what moves you. We will shape the route, stays, and experiences into a meaningful plan.
                 </p>
             </div>
-            <form className="tourPlanner" onSubmit={handleSubmit}>
+            <form className="plannerForm" onSubmit={handleSubmit}>
                 <label>
                     I want to explore
                     <select defaultValue="" required>
@@ -53,8 +53,8 @@ function PlanYourTourIntro() {
                 </label>
                 <button type="submit">Start planning</button>
             </form>
-            {error && <p className="plannerMessage plannerMessage--error">{error}</p>}
-            {submitted && <p className="plannerMessage">Thank you! We have received your preferences. Our team will contact you soon.</p>}
+            {error && <p className="message errorMessage">{error}</p>}
+            {submitted && <p className="message">Thank you! We have received your preferences. Our team will contact you soon.</p>}
         </section>
     );
 }
