@@ -1,6 +1,6 @@
 import './PlanYourTourIntro.css';
 import { useState } from 'react';
-import { destinations } from '../../../../data/travelData';
+import { destinations } from '../../../../data/destinationsToursData';
 
 function PlanYourTourIntro() {
     const [submitted, setSubmitted] = useState(false);

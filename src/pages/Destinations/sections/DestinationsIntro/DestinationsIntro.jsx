@@ -1,7 +1,11 @@
 import './DestinationsIntro.css';
-import { destinations } from '../../../../data/travelData';
+import { destinations } from '../../../../data/destinationsToursData';
+import MapComponent from '../../../../components/MapComponent';
+import { useState } from 'react';
 
 function DestinationsIntro() {
+    const [selectedDestination, setSelectedDesination] = useState(null)
+
     return (
         <section className="destinationPage">
             <div className="pageHeading">
@@ -13,20 +17,15 @@ function DestinationsIntro() {
             </div>
             <div className="destinationGrid">
                 {destinations.map((destination, index) => (
-                    <article className="destinationCard" key={destination.name} style={{ backgroundImage: `url(${destination.image})` }}>
+                    <article className="destinationCard" key={destination.name} style={{ backgroundImage: `url(${destination.image})` }} onClick={() => { setSelectedDesination(destination.coordinates) }}>
                         <span>0{index + 1} / {destination.region}</span>
                         <h2>{destination.name}</h2>
                         <p>{destination.description}</p>
                     </article>
                 ))}
             </div>
-            <div className="mapSection">
-                <div>
-                    <p className="eyebrow">Route map</p>
-                    <h2>See your direction before you go.</h2>
-                    <iframe title="Northern Pakistan destinations map" src="https://www.openstreetmap.org/export/embed.html?bbox=70.9%2C33.9%2C77.7%2C37.9&amp;layer=mapnik" />
-                </div>
-            </div>
+            {/* {console.log(selectedDestination)} */}
+            <MapComponent selectedDestination={selectedDestination} />
         </section>
     );
 }

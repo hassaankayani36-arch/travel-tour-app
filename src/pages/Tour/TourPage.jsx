@@ -1,5 +1,5 @@
 import { Link, useParams } from 'react-router-dom';
-import { tours } from '../../data/travelData';
+import { tours } from '../../data/destinationsToursData';
 import WeatherCard from '../../components/WeatherCard/WeatherCard';
 import PageNotFound from '../PageNotFound/PageNotFound';
 import './TourPage.css';

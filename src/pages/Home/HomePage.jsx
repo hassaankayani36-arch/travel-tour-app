@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import HomeHero from './sections/HomeHero/HomeHero';
-import { destinations } from '../../data/travelData';
+import { destinations } from '../../data/destinationsToursData';
 import { teamMembers } from '../../data/teams';
 import { customerFeedback } from '../../data/feedback';
 import './HomePage.css';

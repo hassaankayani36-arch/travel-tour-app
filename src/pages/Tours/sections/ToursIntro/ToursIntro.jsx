@@ -1,5 +1,5 @@
 import './ToursIntro.css';
-import { tours } from '../../../../data/travelData';
+import { tours } from '../../../../data/destinationsToursData';
 import { Link } from 'react-router-dom';
 
 function ToursIntro() {

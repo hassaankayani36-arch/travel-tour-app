@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { destinations } from '../../../../data/travelData';
+import { destinations } from '../../../../data/destinationsToursData';
 import './HomeHero.css';
 
 const heroImages = destinations.slice(0, 4).map((destination) => destination.image);
