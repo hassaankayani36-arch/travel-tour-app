@@ -1,0 +1,201 @@
+.tourDetailPage {
+    margin: 0 auto;
+    max-width: 1240px;
+    padding: clamp(32px, 5vw, 72px) clamp(20px, 6vw, 88px) 96px;
+}
+
+.backToTours {
+    color: #55706c;
+    display: inline-block;
+    font-family: Arial, sans-serif;
+    font-size: .78rem;
+    font-weight: 700;
+    margin-bottom: 28px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.backToTours:hover {
+    color: #e86f51;
+}
+
+.tourDetailHero {
+    display: grid;
+    gap: clamp(28px, 5vw, 72px);
+    grid-template-columns: minmax(0, 1.05fr) minmax(300px, .95fr);
+    min-height: 500px;
+}
+
+.tourDetailHeroImage {
+    background-position: center;
+    background-size: cover;
+    min-height: 500px;
+}
+
+.tourDetailIntro {
+    align-self: center;
+}
+
+.tourDetailIntro h1 {
+    font-size: clamp(3rem, 6vw, 6.5rem);
+    font-weight: 400;
+    line-height: .95;
+    margin: 18px 0 22px;
+}
+
+.tourDetailDestination,
+.tourDetailDescription {
+    color: #55706c;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.tourDetailDestination {
+    font-size: .85rem;
+    font-weight: 700;
+    margin: 0 0 20px;
+    text-transform: uppercase;
+}
+
+.tourDetailDescription {
+    max-width: 400px;
+    margin: 0;
+}
+
+.tourDetailPrice {
+    color: #e86f51;
+    display: block;
+    font-family: Arial, sans-serif;
+    font-size: 1.1rem;
+    margin-top: 28px;
+}
+
+.tourDetailPrice small {
+    color: #55706c;
+    font-size: .72rem;
+    font-weight: 400;
+}
+
+.tourImageStrip {
+    display: grid;
+    gap: 14px;
+    grid-template-columns: 1.4fr 1fr;
+    margin: 18px 0 96px;
+}
+
+.tourImageStrip img {
+    display: block;
+    height: 220px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.tourImageStrip img:first-child {
+    height: 300px;
+}
+
+.tourDetailGrid {
+    display: grid;
+    gap: clamp(40px, 8vw, 120px);
+    grid-template-columns: minmax(0, 1.35fr) minmax(260px, .65fr);
+}
+
+.itinerarySection h2 {
+    font-size: clamp(2.4rem, 4vw, 4rem);
+    font-weight: 400;
+    margin: 16px 0 34px;
+}
+
+.itineraryList {
+    border-top: 1px solid #d9ded7;
+}
+
+.itineraryItem {
+    border-bottom: 1px solid #d9ded7;
+    display: grid;
+    gap: 22px;
+    grid-template-columns: 84px 1fr;
+    padding: 22px 0;
+}
+
+.itineraryItem > p,
+.itineraryItem span,
+.itineraryItem strong {
+    color: #55706c;
+    font-family: Arial, sans-serif;
+    font-size: .75rem;
+    font-weight: 700;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.itineraryItem h3 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin: 0 0 8px;
+}
+
+.itineraryItem span {
+    color: #e86f51;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.itineraryItem strong {
+    font-weight: 400;
+}
+
+.tourWidgets {
+    display: grid;
+    align-content: start;
+    gap: 18px;
+}
+
+.widgetPlaceholder {
+    align-items: center;
+    border: 1px dashed #9eafa7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 245px;
+    padding: 24px;
+    text-align: center;
+}
+
+.widgetPlaceholder .eyebrow {
+    color: #55706c;
+    margin-bottom: 18px;
+}
+
+.widgetPlaceholder span {
+    color: #9eafa7;
+    font-family: Arial, sans-serif;
+    font-size: .8rem;
+}
+
+@media (max-width: 760px) {
+    .tourDetailHero,
+    .tourDetailGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .tourDetailHeroImage {
+        min-height: 360px;
+    }
+
+    .tourDetailIntro h1 {
+        font-size: clamp(3rem, 15vw, 5rem);
+    }
+
+    .tourImageStrip {
+        margin-bottom: 64px;
+    }
+
+    .tourImageStrip img:first-child {
+        height: 300px;
+    }
+
+    .tourImageStrip img {
+        height: 145px;
+    }
+}

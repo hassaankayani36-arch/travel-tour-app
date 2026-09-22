@@ -14,7 +14,6 @@ function PageNotFound() {
             </Link>
 
 
-
         </main>
     );
 }

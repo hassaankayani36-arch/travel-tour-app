@@ -1,27 +1,39 @@
+import { useEffect, useState } from 'react';
 import HomeHero from './sections/HomeHero/HomeHero';
-import { destinations, tours } from '../../data/travelData';
+import { destinations } from '../../data/travelData';
 import { teamMembers } from '../../data/teams';
 import { customerFeedback } from '../../data/feedback';
 import './HomePage.css';
 
 function HomePage() {
+    const [activeDestination, setActiveDestination] = useState(0);
+    const visibleDestinations = destinations.concat(destinations).slice(activeDestination, activeDestination + 3);
+
+    useEffect(() => {
+        const slider = setInterval(() => {
+            setActiveDestination((currentDestination) => (currentDestination + 1) % destinations.length);
+        }, 2000);
+
+        return () => clearInterval(slider);
+    }, []);
+
     return (
         <main className="homePage">
             <HomeHero />
             <section className="contentSection featuredSection">
                 <div className="sectionHeading">
-                    <p className="eyebrow">Featured journeys</p>
-                    <h2>Every route has a story to tell.</h2>
-                    <p>Small groups, local guides, and moments that stay with you long after the camera is packed away.</p>
+                    <p className="eyebrow">Featured destinations</p>
+                    <h2>Find your next beautiful view.</h2>
+                    <p>Explore the valleys, lakes, forests, and mountain roads that make northern Pakistan unforgettable.</p>
                 </div>
-                <div className="tourGrid">
-                    {tours.map((tour, index) => (
-                        <article className="featuredCard" key={tour.name}>
-                            <img src={tour.image} alt={tour.name} />
+                <div className="tourGrid" aria-live="polite">
+                    {visibleDestinations.map((destination, index) => (
+                        <article className="featuredCard" key={destination.name}>
+                            <img src={destination.image} alt={destination.name} />
                             <div className="cardBody">
-                                <span>0{index + 1} / {tour.duration}</span>
-                                <h3>{tour.name}</h3>
-                                <p>{tour.destination}</p>
+                                <span>0{index + 1} / {destination.region}</span>
+                                <h3>{destination.name}</h3>
+                                <p>{destination.description}</p>
                             </div>
                         </article>
                     ))}
@@ -88,7 +100,7 @@ function HomePage() {
                                 <strong>{feedback.name}</strong>
                                 <span>{feedback.time}</span>
                             </div>
-                            <div className="stars" aria-label={`${feedback.rating} out of 5 stars`}>
+                            <div className="stars">
                                 {'★'.repeat(feedback.rating)}{'☆'.repeat(5 - feedback.rating)}
                             </div>
                             <p>{feedback.review}</p>
