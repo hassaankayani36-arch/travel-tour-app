@@ -16,7 +16,7 @@ export const destinations = [
         temperatureCity: 'Skardu',
     },
     {
-        name: 'Fairy Meadows',
+        name: 'Fairy Meadow',
         region: 'Diamer',
         description: 'A night beneath the stars in the shadow of Nanga Parbat.',
         image: 'https://images.unsplash.com/photo-1464278533981-50106e6176b1?auto=format&fit=crop&w=1200&q=85',
