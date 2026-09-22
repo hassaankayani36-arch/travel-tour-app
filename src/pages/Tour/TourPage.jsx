@@ -54,10 +54,6 @@ function TourPage() {
                     <div className="widgetPlaceholder">
                         <WeatherCard locationName={tour.weatherLocation} />
                     </div>
-                    <div className="widgetPlaceholder">
-                        <p className="eyebrow">Route map</p>
-                        <span>Map widget space</span>
-                    </div>
                 </aside>
             </div>
         </main>

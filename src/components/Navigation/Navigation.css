@@ -5,6 +5,7 @@
     display: flex;
     justify-content: space-between;
     padding: 18px 6%;
+    position: relative;
 }
 
 .appLogo {
@@ -46,15 +47,46 @@
     color: #e86f51;
 }
 
+.menuToggle {
+    display: none;
+    background: transparent;
+    border: 1px solid #d9ded7;
+    border-radius: 8px;
+    cursor: pointer;
+    height: 42px;
+    padding: 10px;
+    width: 42px;
+}
+
+.menuToggle span {
+    background: #173c3a;
+    border-radius: 2px;
+    display: block;
+    height: 2px;
+    margin: 5px 0;
+    width: 100%;
+}
+
 @media (max-width: 640px) {
     .appHeader {
-        align-items: flex-start;
-        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
         gap: 14px;
     }
 
+    .menuToggle {
+        display: block;
+        margin-left: auto;
+    }
+
     .navLinks {
-        flex-wrap: wrap;
+        display: none;
+        flex-direction: column;
         gap: 12px 18px;
+        width: 100%;
+    }
+
+    .navLinks.open {
+        display: flex;
     }
 }
