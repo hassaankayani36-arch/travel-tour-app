@@ -12,7 +12,7 @@ function HomePage() {
     useEffect(() => {
         const slider = setInterval(() => {
             setActiveDestination((currentDestination) => (currentDestination + 1) % destinations.length);
-        }, 2000);
+        }, 7000);
 
         return () => clearInterval(slider);
     }, []);

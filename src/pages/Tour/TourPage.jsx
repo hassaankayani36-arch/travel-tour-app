@@ -26,7 +26,7 @@ function TourPage() {
                 </div>
             </section>
 
-            <section className="tourImageStrip" aria-label={`${tour.name} destinations`}>
+            <section className="tourImageStrip">
                 {tour.images.map((image, index) => (
                     <img key={image} src={image} alt={`${tour.destination} view ${index + 1}`} />
                 ))}

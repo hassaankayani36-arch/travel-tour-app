@@ -1,5 +1,6 @@
 export const destinations = [
     {
+        id: 1,
         name: 'Hunza',
         region: 'Gilgit-Baltistan',
         description: 'Quiet lakes, glass-like mountains, and welcoming local communities.',
@@ -8,6 +9,8 @@ export const destinations = [
         temperatureCity: 'Hunza',
     },
     {
+        id: 2,
+
         name: 'Skardu',
         region: 'Gilgit-Baltistan',
         description: 'A memorable mountain escape from the Deosai plains to Shangrila.',
@@ -16,6 +19,8 @@ export const destinations = [
         temperatureCity: 'Skardu',
     },
     {
+        id: 3,
+
         name: 'Fairy Meadow',
         region: 'Diamer',
         description: 'A night beneath the stars in the shadow of Nanga Parbat.',
@@ -24,6 +29,8 @@ export const destinations = [
         temperatureCity: 'Fairy Meadows',
     },
     {
+        id: 4,
+
         name: 'Kumrat',
         region: 'Khyber Pakhtunkhwa',
         description: 'Deodar forests, flowing rivers, and genuinely slow travel.',

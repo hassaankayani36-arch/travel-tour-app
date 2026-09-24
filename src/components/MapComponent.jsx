@@ -35,7 +35,6 @@ function MapComponent({ selectedDestination }) {
 
                 {destinations.map((destination) => (
                     <Marker
-                        key={destination.name}
                         position={destination.coordinates}
                         icon={myIcon}
                     />

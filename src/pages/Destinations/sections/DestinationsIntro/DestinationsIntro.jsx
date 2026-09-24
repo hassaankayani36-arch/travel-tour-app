@@ -18,7 +18,7 @@ function DestinationsIntro() {
             <div className="destinationGrid">
                 {destinations.map((destination, index) => (
                     <article className="destinationCard" key={destination.name} style={{ backgroundImage: `url(${destination.image})` }} onClick={() => { setSelectedDesination(destination.coordinates) }}>
-                        <span>0{index + 1} / {destination.region}</span>
+                        <span>{destination.id} / {destination.region}</span>
                         <h2>{destination.name}</h2>
                         <p>{destination.description}</p>
                     </article>
